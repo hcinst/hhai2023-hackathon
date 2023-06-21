@@ -35,15 +35,4 @@ git branch <your-name>-hackathon
 git checkout <your-name>-hackathon
 ```
 
-# Add your algorithm.
-
-Search for “HACKATHON” in multiple places in megatiles.py and add your algorithm there.
-
-# After adding your changes.
- Commit your changes to the branch.
- and push to github.
-
- ```
- git commit -a "your message"
- git push
- ```
+# Adding your changes.

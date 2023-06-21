@@ -1,0 +1,91 @@
+megatiles stepwise collapsing
+
+
+Set distance thresholds (cored / caa) ; set response threshold (% of people in response)
+set number of answers to combine: cohort_size
+set number of times to sample for each megatile: samples
+
+
+
+For each Megatile:
+
+	For number of samples
+		choose players
+
+		For each type (cored and CAA):
+			Create array of all points from all contributors called cohort_ratings (x, y, player_id(or pairing id, using cantor fn), contributor count) 
+			On each pass
+							  Create a list of pairs closer than delta - sort ascending.
+				(make pairwise comparisons to find closest pair, and then next closest, etc., removing each pair from the search pool when it has been identified)
+				if anything is closer than delta and not same id then
+					combine anything closer than delta
+					(base new coordinates on how many answers in each pair member, taking a weighted average of XS and ys)
+					(update pairing id)
+					(update count - as sum of contributing)
+
+			Apply response threshold to grid and only retain crowd markers that exceed the threshold
+			Derive a type-specific megatile response array and compare to expert answer
+			
+
+-------------
+
+Test outputs
+
+ [[[500.990099009901, 149.5049504950495, ['188'], 1, True], [283.16831683168317, 253.46534653465346, ['188'], 1, True], 
+   [487.20001220703125, 146, ['246'], 1, True], [294.20001220703125, 264, ['246'], 1, True]], 
+ 
+ [[494.0950556084661, 147.75247524752476, ['188', '246'], 2, False], [288.6841645193572, 258.73267326732673, ['188', '246'], 2, False]]]
+
+
+
+
+[[[63.10574503445678, 339.66727845743986, ['137'], 1, True], [171.19029188993656, 377.60320014345507, ['137'], 1, True], [328.26485187704765, 404.1136744028831, ['137'], 1, False], [447.1082660837238, 196.90770982187445, ['137'], 1, False], [194, 204.39999389648438, ['268'], 1, False], [492, 266.3999938964844, ['268'], 1, False], [220, 101.39999389648438, ['268'], 1, False], [103, 109.39999389648438, ['268'], 1, False], [524, 217.39999389648438, ['268'], 1, False], [179, 382.3999938964844, ['268'], 1, True], [58, 341.3999938964844, ['268'], 1, True]], 
+[[60.552872517228394, 340.5336361769621, ['137', '268'], 2, False], [175.0951459449683, 380.0015970199697, ['137', '268'], 2, False]]]
+
+
+[[[213, 97, ['176'], 1, True], [199, 205, ['176'], 1, True], 
+ [194, 204.39999389648438, ['268'], 1, True], 
+ [492, 266.3999938964844, ['268'], 1, False], 
+ [220, 101.39999389648438, ['268'], 1, True], 
+ [103, 109.39999389648438, ['268'], 1, False], 
+ [524, 217.39999389648438, ['268'], 1, False], 
+ [179, 382.3999938964844, ['268'], 1, False], 
+ [58, 341.3999938964844, ['268'], 1, False]], 
+ 
+ [[196.5, 204.6999969482422, ['176', '268'], 2, False], 
+ [216.5, 99.19999694824219, ['176', '268'], 2, False], 
+ [492, 266.3999938964844, ['268'], 1, False], 
+ [103, 109.39999389648438, ['268'], 1, False], 
+ [524, 217.39999389648438, ['268'], 1, False], 
+ [179, 382.3999938964844, ['268'], 1, False], 
+ [58, 341.3999938964844, ['268'], 1, False]]]
+ 
+ 
+ 
+ ['229', '155', '188']
+0
+	 pass
+		[507.53432339747354, 4.7704056539382425, ['155'], 1, False]
+1		[209.52972159677276, 95.37637421548699, ['155'], 1, True]
+2		[199.05504315035094, 205.36049790291608, ['155'], 1, True]
+1		[208.9108910891089, 96.03960396039604, ['188'], 1, True]
+2		[196.03960396039605, 204.95049504950495, ['188'], 1, True]
+		[200, 202, ['229'], 1, True]
+		[212, 99, ['229'], 1, True]
+		[171, 376, ['229'], 1, False]
+	 pass
+1,1		[209.22030634294083, 95.70798908794151, ['155', '188'], 2, True]
+2,2		[197.5473235553735, 205.15549647621052, ['155', '188'], 2, True]
+		[507.53432339747354, 4.7704056539382425, ['155'], 1, False]
+0,2		[200, 202, ['229'], 1, True]
+0,1		[212, 99, ['229'], 1, True]
+		[171, 376, ['229'], 1, False]
+	 pass
+2		[198.36488237024898, 204.10366431747366, ['155', '188', '229'], 3, False]
+1		[210.14687089529386, 96.80532605862767, ['155', '188', '229'], 3, False]
+		[507.53432339747354, 4.7704056539382425, ['155'], 1, False]
+		[171, 376, ['229'], 1, False]
+
+
+ 
+ 
