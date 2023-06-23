@@ -15,8 +15,8 @@ For Debian based.
 
 # Git configuration
 ``` 
-git config --global user.name "Emma Paris"
-git config --global user.email "eparis@atlassian.com"
+git config --global user.name "Your Name"
+git config --global user.email "your_email@your_domain.com"
 ```
 
 # Cloning the project.
