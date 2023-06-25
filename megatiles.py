@@ -374,7 +374,7 @@ def build_crowd(crowd):
   result = new_tally
 
 
-# HACKATHON - code your wisdom of crowds approach here 
+# HACKATHON - code your wisdom of crowds approach here -LHV TEST
 def hack_crowd_answer(cohort_ratings,cohort,players,megatile,plaque_type,deltas):
       # generate list of all markers from cohort
       for player_rating in players:
