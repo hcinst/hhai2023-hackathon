@@ -25,6 +25,22 @@ git config --global user.email "your-email"
 git clone https://github.com/hcinst/hhai-hackathon.git
 ```
 
+# Project Installation
+
+```
+pip install -r requirements.txt
+```
+
+# Project Description
+
+**collapse.py** - our original code for testing the successive collapsing method</br>
+**megatiles.py** - cleaned up and commented code with insertion points for hackathon code (search for “HACKATHON” in multiple places)</br>
+**pilot_megatiles_experts.csv** - annotations from two professional neuropathologists</br>
+**pilot_megatiles_players.csv** - annotations from 30 non-expert volunteers</br>
+**megatiles_stepwise_collapsing.txt** - pseudocode explaining our stepwise collapsing methods</br>
+
+</br>
+
 # Working on the project.
 
 Run the following command to create a new branch and checkout on the branch.
