@@ -15,8 +15,8 @@ For Debian based.
 
 # Git configuration
 ``` 
-git config --global user.name "Emma Paris"
-git config --global user.email "eparis@atlassian.com"
+git config --global user.name "your-username"
+git config --global user.email "your-email"
 ```
 
 # Cloning the project.
@@ -44,6 +44,6 @@ Search for “HACKATHON” in multiple places in megatiles.py and add your algor
  and push to github.
 
  ```
- git commit -a "your message"
+ git commit -am "your message"
  git push
  ```
