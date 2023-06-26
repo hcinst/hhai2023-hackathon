@@ -63,3 +63,5 @@ Search for “HACKATHON” in multiple places in megatiles.py and add your algor
  git commit -am "your message"
  git push
  ```
+<br>
+SLIDES: https://docs.google.com/presentation/d/1_fHSHrW9Blkx22NCbTP89_3nllzQXmqeuOX0cPc3jD8/edit?usp=sharing
