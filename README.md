@@ -65,3 +65,5 @@ Search for “HACKATHON” in multiple places in megatiles.py and add your algor
  ```
 <br>
 SLIDES: https://docs.google.com/presentation/d/1_fHSHrW9Blkx22NCbTP89_3nllzQXmqeuOX0cPc3jD8/edit?usp=sharing
+<br>
+GRAPHS: https://docs.google.com/spreadsheets/d/1rxcEidD33QYG6uIK8pvPzoRCvGNNiUg02u38A90dJ_w/edit?usp=sharing
